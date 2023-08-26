@@ -39,33 +39,20 @@ def checkSeats(url):
     
 def notify(course):
     message = client.messages.create(
-        from_='+16185472934',
+        from_='+',
         body=course.dept+' '+course.code+' '+course.url,
-        to='+17788884916'
+        to='+'
     )
 
 
     
 
 
-# courses = []
-
-# while True:
-
-#     dept = input("enter course department: ")
-#     code = input("enter course code: ")
-#     section = input("enter course section: ")
-#     session = input("session W or S: ")
-#     year = input("enter year: ")
-#     courses.append(Course(dept, code, section, session, year))
-#     cont = input("would you like to add another course [y or n]: ")
-#     if cont=="n":
-#         break
 sys.excepthook = myexcepthook
 account_sid = ""
 auth_token = ""
 client = Client(account_sid, auth_token)
-sender = "+16185472934"
+sender = "+"
 client.messages.create(from_=sender, body="up and running", to="+17788884916")
 # totalSeats = re.compile("<td width=&#39;200px&#39;>Total Seats Remaining:</td>" + "<td align=&#39;left&#39;><strong>(.*?)</strong></td>")
 generalSeats = re.compile("<td width=&#39;200px&#39;>General Seats Remaining:</td>" + "<td align=&#39;left&#39;><strong>(.*?)</strong></td>")
