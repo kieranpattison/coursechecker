@@ -62,8 +62,8 @@ def notify(course):
 #     if cont=="n":
 #         break
 sys.excepthook = myexcepthook
-account_sid = "AC832679e2f2245a821e95e6cecde6d2b7"
-auth_token = "523e92cca4147462f1a1f9368ffb647a"
+account_sid = ""
+auth_token = ""
 client = Client(account_sid, auth_token)
 sender = "+16185472934"
 client.messages.create(from_=sender, body="up and running", to="+17788884916")
